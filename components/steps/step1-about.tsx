@@ -5,7 +5,6 @@ import { FormData } from '@/components/sections/request-trip-wizard'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { Badge } from '@/components/ui/badge'
 import {
   Select,
   SelectContent,
@@ -63,16 +62,16 @@ export default function Step1About({ data, onNext }: Step1Props) {
         />
       </div>
 
-      {/* City & State */}
+      {/* City and Country */}
       <div className="space-y-3">
         <Label htmlFor="city" className="text-base font-medium">
-          City & State in India
+          City and Country
         </Label>
         <Input
           id="city"
           value={city}
           onChange={(e) => setCity(e.target.value)}
-          placeholder="e.g., Mumbai, Maharashtra"
+          placeholder="e.g., Mumbai, India or Berlin, Germany"
           className="h-10 text-base"
         />
       </div>
@@ -82,12 +81,10 @@ export default function Step1About({ data, onNext }: Step1Props) {
         <Label className="text-base font-medium block">
           How many people are travelling?
         </Label>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {[
-            { value: '1', label: '1 person' },
-            { value: '2', label: '2 people' },
-            { value: '3', label: '3 people' },
-            { value: '3+', label: '3+ people' },
+            { value: '1', label: 'Solo traveler' },
+            { value: '2', label: '2 people (couple or friends)' },
           ].map((option) => (
             <button
               key={option.value}
@@ -105,11 +102,9 @@ export default function Step1About({ data, onNext }: Step1Props) {
             </button>
           ))}
         </div>
-        {groupSize === '3+' && (
-          <p className="text-sm text-secondary mt-2">
-            We typically host a maximum of 2–3 guests, so larger groups we'll discuss with you personally.
-          </p>
-        )}
+        <p className="text-sm text-muted-foreground mt-2">
+          We host a maximum of 2 guests at a time.
+        </p>
       </div>
 
       {/* Travel Season */}

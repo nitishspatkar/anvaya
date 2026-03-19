@@ -17,6 +17,12 @@ export default function Step7Review({ data, onSubmit, onBack }: Step7Props) {
   const [email, setEmail] = useState(data.email)
   const [whatsapp, setWhatsapp] = useState(data.whatsapp)
   const [consent, setConsent] = useState(data.consent)
+  const groupSizeLabel =
+    data.groupSize === '1'
+      ? 'Solo traveler'
+      : data.groupSize === '2'
+      ? '2 people (couple or friends)'
+      : data.groupSize
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -55,7 +61,7 @@ export default function Step7Review({ data, onSubmit, onBack }: Step7Props) {
           </div>
           <div>
             <dt className="text-muted-foreground">Group size</dt>
-            <dd className="text-foreground font-medium">{data.groupSize} person(ies)</dd>
+            <dd className="text-foreground font-medium">{groupSizeLabel}</dd>
           </div>
           <div>
             <dt className="text-muted-foreground">Travel time</dt>

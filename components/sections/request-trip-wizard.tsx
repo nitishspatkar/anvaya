@@ -116,7 +116,7 @@ export function RequestTripWizard() {
           {step === 1 && (
             <div className="mb-8 p-4 bg-accent/5 border border-accent/20 rounded-lg">
               <p className="text-sm text-foreground">
-                This is not a booking. It's the start of a conversation. We'll use your responses to create a trip perfectly tailored to you.
+                This is not a booking. It's the start of a conversation. We'll get back to you.
               </p>
             </div>
           )}

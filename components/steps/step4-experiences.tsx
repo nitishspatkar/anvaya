@@ -5,15 +5,10 @@ import { FormData } from '@/components/sections/request-trip-wizard'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
 import {
-  Utensils,
   Mountain,
   Wine,
-  Snowflake,
-  Compass,
-  Users,
-  Eye,
   MapPin,
-  Heart,
+  Utensils,
 } from 'lucide-react'
 
 interface Step4Props {
@@ -39,20 +34,41 @@ export default function Step4Experiences({ data, onNext, onBack }: Step4Props) {
   }
 
   const experienceOptions = [
-    { value: 'hiking-easy', label: 'Hiking Easy', icon: Mountain },
-    { value: 'hiking-moderate', label: 'Hiking Moderate', icon: Mountain },
-    { value: 'hiking-challenging', label: 'Hiking Challenging', icon: Mountain },
-    { value: 'cheese', label: 'Cheese-Making', icon: Utensils },
-    { value: 'vineyard', label: 'Vineyard Walk', icon: Wine },
-    { value: 'igloo', label: 'Igloo Building', icon: Snowflake },
-    { value: 'snowshoe', label: 'Snowshoeing', icon: Snowflake },
-    { value: 'fondue', label: 'Fondue at Home', icon: Utensils },
-    { value: 'indian-meal', label: 'Indian Home Meal', icon: Utensils },
-    { value: 'bollywood', label: 'Bollywood Locations', icon: Eye },
-    { value: 'jungfraujoch', label: 'Jungfraujoch', icon: Mountain },
-    { value: 'titlis', label: 'Titlis', icon: Mountain },
-    { value: 'bern-walk', label: 'Bern City Walk', icon: MapPin },
-    { value: 'other', label: 'Other', icon: Heart },
+    {
+      value: 'Alpine trails & mountain walks',
+      label: 'Alpine trails & mountain walks',
+      description:
+        'Switzerland has breathtaking hikes from gentle forest walks to high-altitude trails. We know the routes that are beautiful, seasonal, and less crowded.',
+      icon: Mountain,
+    },
+    {
+      value: 'Cheese-making with alpine producers',
+      label: 'Cheese-making with alpine producers',
+      description:
+        'Visit small alpine dairy farms and meet cheesemakers keeping generational traditions alive.',
+      icon: Utensils,
+    },
+    {
+      value: 'Wine terraces & winery experiences',
+      label: 'Wine terraces & winery experiences',
+      description:
+        'Explore vineyard terraces near Lake Geneva and the Rhone Valley with tasting experiences from local producers.',
+      icon: Wine,
+    },
+    {
+      value: 'Swiss fondue, raclette & mountain traditions',
+      label: 'Swiss fondue, raclette & mountain traditions',
+      description:
+        'Enjoy warm, intimate Swiss food traditions in the right setting, with stories and local context.',
+      icon: Utensils,
+    },
+    {
+      value: 'The Bern and many other pretty towns only locals know',
+      label: 'The Bern and many other pretty towns only locals know',
+      description:
+        'Beyond postcard spots: hidden neighborhoods, riverside corners, weekend markets, and beautiful small towns locals actually visit.',
+      icon: MapPin,
+    },
   ]
 
   return (
@@ -61,7 +77,7 @@ export default function Step4Experiences({ data, onNext, onBack }: Step4Props) {
         <Label className="text-base font-medium block">
           What experiences interest you? (Select as many as you'd like)
         </Label>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+        <div className="space-y-3">
           {experienceOptions.map((option) => {
             const Icon = option.icon
             const isSelected = experiences.includes(option.value)
@@ -70,18 +86,25 @@ export default function Step4Experiences({ data, onNext, onBack }: Step4Props) {
                 key={option.value}
                 type="button"
                 onClick={() => toggleExperience(option.value)}
-                className={`p-3 rounded-lg border-2 transition text-center ${
+                className={`w-full p-4 rounded-lg border-2 transition text-left ${
                   isSelected
                     ? 'border-primary bg-primary/5'
                     : 'border-border bg-background hover:border-border/50'
                 }`}
               >
-                <Icon className={`size-5 mx-auto mb-2 ${
+                <div className="flex items-start gap-3">
+                  <Icon className={`size-5 mt-1 flex-shrink-0 ${
                   isSelected ? 'text-primary' : 'text-secondary'
                 }`} />
-                <p className="text-xs font-medium text-foreground">
-                  {option.label}
-                </p>
+                  <div className="flex-1">
+                    <p className="text-sm font-medium text-foreground">
+                      {option.label}
+                    </p>
+                    <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                      {option.description}
+                    </p>
+                  </div>
+                </div>
               </button>
             )
           })}
