@@ -5,12 +5,12 @@ export default function GalleryPreview() {
   const images = [
     { src: '/gallery/Beatenberg.jpg', alt: 'Mountain panorama at Beatenberg' },
     { src: '/gallery/Bern_Spring.jpg', alt: 'Spring view in Bern' },
-    { src: '/gallery/Dallenwil.jpg', alt: 'Scenic landscape in Dallenwil' },
-    { src: '/gallery/Gurten_Bern.jpg', alt: 'Gurten hillside in Bern' },
-    { src: '/gallery/Hikes_1_Giswil.jpg', alt: 'Hiking trail near Giswil' },
-    { src: '/gallery/Hikes_2_Backalpsee.jpg', alt: 'Backalpsee hike and alpine lake' },
-    { src: '/gallery/Hikes_3_Kandersteg.jpg', alt: 'Kandersteg mountain hike' },
-    { src: '/gallery/Hikes_4_Zermatt.jpg', alt: 'Zermatt mountain views' },
+    { src: '/gallery/Boltigen.jpg', alt: 'Alpine ridge view near Boltigen' },
+    { src: '/gallery/Brienz.jpg', alt: 'Lake and mountain panorama above Brienz' },
+    { src: '/gallery/Creux_du_Van.jpg', alt: 'Creux du Van natural amphitheater' },
+    { src: '/gallery/Hikes_6_Kandersteg.jpg', alt: 'Kandersteg mountain lake landscape' },
+    { src: '/gallery/Lauterbrunnen.jpg', alt: 'Lauterbrunnen valley path and cliffs' },
+    { src: '/gallery/Zermatt.jpg', alt: 'Glacier and snowy peaks near Zermatt' },
   ];
 
   return (
