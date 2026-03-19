@@ -22,13 +22,13 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-foreground mb-4">Navigation</h4>
             <nav className="space-y-2">
-              <Link href="#" className="block text-sm text-muted-foreground hover:text-primary transition">
+              <Link href="/experiences" className="block text-sm text-muted-foreground hover:text-primary transition">
                 Experiences
               </Link>
-              <Link href="#" className="block text-sm text-muted-foreground hover:text-primary transition">
+              <Link href="/gallery" className="block text-sm text-muted-foreground hover:text-primary transition">
                 Gallery
               </Link>
-              <Link href="#" className="block text-sm text-muted-foreground hover:text-primary transition">
+              <Link href="/about" className="block text-sm text-muted-foreground hover:text-primary transition">
                 Our Story
               </Link>
             </nav>

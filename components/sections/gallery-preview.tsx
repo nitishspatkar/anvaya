@@ -1,18 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { HOME_GALLERY_PREVIEW } from '@/lib/gallery-images'
 
 export default function GalleryPreview() {
-  const images = [
-    { src: '/gallery/Beatenberg.jpg', alt: 'Mountain panorama at Beatenberg' },
-    { src: '/gallery/Bern_Spring.jpg', alt: 'Spring view in Bern' },
-    { src: '/gallery/Boltigen.jpg', alt: 'Alpine ridge view near Boltigen' },
-    { src: '/gallery/Brienz.jpg', alt: 'Lake and mountain panorama above Brienz' },
-    { src: '/gallery/Creux_du_Van.jpg', alt: 'Creux du Van natural amphitheater' },
-    { src: '/gallery/Hikes_6_Kandersteg.jpg', alt: 'Kandersteg mountain lake landscape' },
-    { src: '/gallery/Lauterbrunnen.jpg', alt: 'Lauterbrunnen valley path and cliffs' },
-    { src: '/gallery/Zermatt.jpg', alt: 'Glacier and snowy peaks near Zermatt' },
-  ];
-
   return (
     <section id="gallery" className="py-16 md:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -28,7 +18,7 @@ export default function GalleryPreview() {
 
         {/* Editorial Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-max gap-4 md:gap-6 mb-12">
-          {images.map((img, index) => (
+          {HOME_GALLERY_PREVIEW.map((img, index) => (
             <div key={img.src} className="relative aspect-square overflow-hidden group">
               <Image
                 src={img.src}
@@ -44,7 +34,7 @@ export default function GalleryPreview() {
 
         {/* View Gallery Link */}
         <div className="border-t border-border pt-8">
-          <Link href="#" className="text-primary font-medium hover:underline text-lg inline-flex items-center gap-2">
+          <Link href="/gallery" className="text-primary font-medium hover:underline text-lg inline-flex items-center gap-2">
             View Full Gallery →
           </Link>
         </div>

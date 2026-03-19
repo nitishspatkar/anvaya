@@ -20,7 +20,7 @@ export default function Header() {
           <Link href="/experiences" className="text-sm text-foreground hover:text-primary transition">
             Experiences
           </Link>
-          <Link href="#gallery" className="text-sm text-foreground hover:text-primary transition">
+          <Link href="/gallery" className="text-sm text-foreground hover:text-primary transition">
             Gallery
           </Link>
           <Link href="/about" className="text-sm text-foreground hover:text-primary transition">
@@ -54,7 +54,7 @@ export default function Header() {
             <Link href="/experiences" className="block text-sm text-foreground hover:text-primary transition">
               Experiences
             </Link>
-            <Link href="#gallery" className="block text-sm text-foreground hover:text-primary transition">
+            <Link href="/gallery" className="block text-sm text-foreground hover:text-primary transition">
               Gallery
             </Link>
             <Link href="/about" className="block text-sm text-foreground hover:text-primary transition">
