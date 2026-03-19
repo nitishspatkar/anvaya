@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Warm Alpine Minimalism Palette */
+  /* Warm Anvaya Minimalism Palette */
   --background: #FAF8F5;
   --foreground: #2C3E2F;
   --card: #FAF8F5;

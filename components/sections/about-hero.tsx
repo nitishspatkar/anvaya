@@ -14,7 +14,7 @@ export default function AboutHero() {
       <div className="max-w-4xl mx-auto px-4 md:px-8 -mt-24 relative z-10">
         <div className="bg-background rounded-none p-8 md:p-12 mb-8 md:mb-12">
           <h1 className="font-serif text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-            The Story of Alpine
+            The Story of Anvaya
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl">

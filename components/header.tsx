@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Logo from '@/components/logo'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +12,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-6 flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <Link href="/" className="font-serif text-2xl font-bold text-primary">
-            Anvaya
-          </Link>
+          <Logo />
         </div>
 
         {/* Desktop Nav */}

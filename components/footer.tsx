@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Logo from '@/components/logo'
 
 export default function Footer() {
   return (
@@ -7,7 +8,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <h3 className="font-serif text-xl font-bold text-primary mb-4">Alpine</h3>
+            <Logo
+              className="mb-4"
+              latinClassName="font-serif text-xl font-bold text-primary"
+              devanagariClassName="text-xs text-muted-foreground tracking-wide"
+            />
             <p className="text-sm text-muted-foreground leading-relaxed">
               Experience Switzerland through the eyes of locals who call it home.
             </p>
@@ -54,7 +59,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-border pt-8">
           <p className="text-xs text-muted-foreground text-center">
-            © 2024 Alpine Hosting. All rights reserved.
+            © 2024 Anvaya Hosting. All rights reserved.
           </p>
         </div>
       </div>

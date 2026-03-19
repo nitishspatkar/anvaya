@@ -195,7 +195,7 @@ export default function Step7Review({ data, onSubmit, onBack }: Step7Props) {
             className="mt-1"
           />
           <span className="text-sm text-foreground">
-            I consent to be contacted by Alpine via email and WhatsApp to discuss my trip. I understand this is not a booking confirmation.
+            I consent to be contacted by Anvaya via email and WhatsApp to discuss my trip. I understand this is not a booking confirmation.
           </span>
         </Label>
       </div>
