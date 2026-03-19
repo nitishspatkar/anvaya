@@ -11,12 +11,6 @@ export default function GalleryPreview() {
     { src: '/gallery/Hikes_2_Backalpsee.jpg', alt: 'Backalpsee hike and alpine lake' },
     { src: '/gallery/Hikes_3_Kandersteg.jpg', alt: 'Kandersteg mountain hike' },
     { src: '/gallery/Hikes_4_Zermatt.jpg', alt: 'Zermatt mountain views' },
-    { src: '/gallery/Hoher_Kasten.jpg', alt: 'Viewpoint near Hoher Kasten' },
-    { src: '/gallery/Niesen.jpg', alt: 'Niesen mountain ridge' },
-    { src: '/gallery/Rigi_Winter.jpg', alt: 'Winter landscape at Rigi' },
-    { src: '/gallery/Seealpsee.jpg', alt: 'Seealpsee lake in the Alps' },
-    { src: '/gallery/Thun.jpg', alt: 'Lakeside scene in Thun' },
-    { src: '/gallery/Val_de-Charmey.jpg', alt: 'Val-de-Charmey alpine valley' },
   ];
 
   return (
