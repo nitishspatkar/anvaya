@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function FinalCTA() {
   return (
     <section className="py-16 md:py-24 bg-primary text-primary-foreground">
@@ -10,9 +12,9 @@ export default function FinalCTA() {
           Let&apos;s craft an experience that feels like coming home.
         </p>
 
-        <button className="bg-primary-foreground text-primary px-8 py-4 font-medium text-lg hover:bg-primary-foreground/90 transition">
+        <Link href="/request-trip" className="inline-block bg-primary-foreground text-primary px-8 py-4 font-medium text-lg hover:bg-primary-foreground/90 transition">
           Request a Trip
-        </button>
+        </Link>
 
         <p className="mt-8 text-sm opacity-75">
           Response within 48 hours. Limited to 2 guests at a time.

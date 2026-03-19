@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function ExperiencesCTA() {
   return (
     <section className="bg-muted/30 py-16 md:py-24">
@@ -10,9 +12,9 @@ export default function ExperiencesCTA() {
           Tell us what captures your imagination — we&apos;ll build around you.
         </p>
 
-        <button className="bg-primary text-primary-foreground px-8 md:px-10 py-3 md:py-4 font-medium text-base md:text-lg hover:bg-primary/90 transition">
+        <Link href="/request-trip" className="inline-block bg-primary text-primary-foreground px-8 md:px-10 py-3 md:py-4 font-medium text-base md:text-lg hover:bg-primary/90 transition">
           Request a Trip
-        </button>
+        </Link>
       </div>
     </section>
   );
