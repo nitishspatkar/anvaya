@@ -1,11 +1,22 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function GalleryPreview() {
   const images = [
-    { aspect: 'aspect-square', gradient: 'from-secondary/40 to-secondary/20' },
-    { aspect: 'aspect-[4/5]', gradient: 'from-muted/60 to-muted/40' },
-    { aspect: 'aspect-square', gradient: 'from-muted/50 to-muted/30' },
-    { aspect: 'aspect-[5/4]', gradient: 'from-secondary/30 to-muted/30' },
+    { src: '/gallery/Beatenberg.jpg', alt: 'Mountain panorama at Beatenberg' },
+    { src: '/gallery/Bern_Spring.jpg', alt: 'Spring view in Bern' },
+    { src: '/gallery/Dallenwil.jpg', alt: 'Scenic landscape in Dallenwil' },
+    { src: '/gallery/Gurten_Bern.jpg', alt: 'Gurten hillside in Bern' },
+    { src: '/gallery/Hikes_1_Giswil.jpg', alt: 'Hiking trail near Giswil' },
+    { src: '/gallery/Hikes_2_Backalpsee.jpg', alt: 'Backalpsee hike and alpine lake' },
+    { src: '/gallery/Hikes_3_Kandersteg.jpg', alt: 'Kandersteg mountain hike' },
+    { src: '/gallery/Hikes_4_Zermatt.jpg', alt: 'Zermatt mountain views' },
+    { src: '/gallery/Hoher_Kasten.jpg', alt: 'Viewpoint near Hoher Kasten' },
+    { src: '/gallery/Niesen.jpg', alt: 'Niesen mountain ridge' },
+    { src: '/gallery/Rigi_Winter.jpg', alt: 'Winter landscape at Rigi' },
+    { src: '/gallery/Seealpsee.jpg', alt: 'Seealpsee lake in the Alps' },
+    { src: '/gallery/Thun.jpg', alt: 'Lakeside scene in Thun' },
+    { src: '/gallery/Val_de-Charmey.jpg', alt: 'Val-de-Charmey alpine valley' },
   ];
 
   return (
@@ -22,15 +33,17 @@ export default function GalleryPreview() {
         </div>
 
         {/* Editorial Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-max gap-4 md:gap-6 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-max gap-4 md:gap-6 mb-12">
           {images.map((img, index) => (
-            <div
-              key={index}
-              className={`${img.aspect} bg-gradient-to-br ${img.gradient} rounded-none flex items-center justify-center`}
-            >
-              <div className="text-center opacity-50">
-                <span className="text-4xl">🏔️</span>
-              </div>
+            <div key={img.src} className="relative aspect-square overflow-hidden group">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                priority={index < 4}
+              />
             </div>
           ))}
         </div>
