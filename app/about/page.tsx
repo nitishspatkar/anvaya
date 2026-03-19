@@ -2,7 +2,6 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import AboutHero from '@/components/sections/about-hero';
 import StorySection from '@/components/sections/story-section';
-import PhilosophyHighlight from '@/components/sections/philosophy-highlight';
 import AboutCTA from '@/components/sections/about-cta';
 
 export default function AboutPage() {
@@ -28,7 +27,6 @@ export default function AboutPage() {
         content="Warmth is non-negotiable. We treat you as we'd treat our own family. We're flexible—if you want to change plans, we adapt. We're curious—your stories matter as much as ours. We're honest—we'll tell you what's worth your time and what's worth skipping. Most importantly, we're a cultural bridge. We understand what it's like to navigate between two worlds. We celebrate what makes us different. And we create space where you feel not just welcomed, but truly at home."
         imagePosition="right"
       />
-      <PhilosophyHighlight />
       <AboutCTA />
       <Footer />
     </main>
