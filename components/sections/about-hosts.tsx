@@ -12,11 +12,11 @@ export default function AboutHosts() {
             </h2>
             
             <p className="text-lg text-foreground leading-relaxed mb-6">
-              Rajesh and Priya moved from Mumbai to Bern in 2015 to chase careers in tech and design. What began as a weekend getaway tradition with visiting friends from home evolved into something deeper—a desire to share the Switzerland they&apos;ve come to love with others who understand what it means to belong between two worlds.
+              We moved to Bern in 2018 to chase careers in tech and medicine. Since then, we have hosted many friends and been on countless hikes in the Swiss Alps across all seasons. We have a desire to share the Switzerland we&apos;ve come to love with others who understand what it means to belong between two worlds.
             </p>
 
             <p className="text-lg text-foreground leading-relaxed mb-8">
-              Now, they curate intimate journeys that blend Alpine adventure with Indian warmth. Every experience is personal, thoughtful, and rooted in their 9 years of living, working, and exploring in Switzerland.
+              Now, we curate intimate journeys for you. Every experience is personal, thoughtful, and rooted in our 9 years of living, working, and exploring in Switzerland.
             </p>
 
             <Link href="#" className="text-primary font-medium hover:underline text-lg inline-flex items-center gap-2">
