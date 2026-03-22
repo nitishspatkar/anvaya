@@ -3,41 +3,46 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
 :root {
-  /* Warm, Clear, & Honest: Light Alpine Palette */
-  --background: #FDFBF7;
-  --foreground: #2D2420;
-  --card: #FFFFFF;
-  --card-foreground: #2D2420;
-  --popover: #FFFFFF;
-  --popover-foreground: #2D2420;
-  --primary: #16A084;
-  --primary-foreground: #FFFFFF;
-  --secondary: #D8975F;
-  --secondary-foreground: #2D2420;
-  --muted: #E8E3DB;
-  --muted-foreground: #7A7369;
-  --accent: #16A084;
-  --accent-foreground: #FFFFFF;
-  --destructive: #D85C4A;
-  --destructive-foreground: #FFFFFF;
-  --border: #E8E3DB;
-  --input: #FFFFFF;
-  --ring: #16A084;
-  --chart-1: #16A084;
-  --chart-2: #D8975F;
-  --chart-3: #2DACAA;
-  --chart-4: #16877C;
-  --chart-5: #C99F7D;
-  --radius: 4px;
-  --sidebar: #FDFBF7;
-  --sidebar-foreground: #2D2420;
-  --sidebar-primary: #16A084;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #D8975F;
-  --sidebar-accent-foreground: #2D2420;
-  --sidebar-border: #E8E3DB;
-  --sidebar-ring: #16A084;
+  /* Alpine Journal Design System */
+  --background: #faf9f5;
+  --foreground: #1a1c1a;
+  --card: #f4f4f0;
+  --card-foreground: #1a1c1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1c1a;
+  --primary: #18281e;
+  --primary-foreground: #faf9f5;
+  --secondary: #31220a;
+  --secondary-foreground: #faf9f5;
+  --muted: #d4d0c8;
+  --muted-foreground: #6b6964;
+  --accent: #18281e;
+  --accent-foreground: #faf9f5;
+  --destructive: #c85c54;
+  --destructive-foreground: #faf9f5;
+  --border: #e8e4da;
+  --input: #ffffff;
+  --ring: #18281e;
+  --chart-1: #18281e;
+  --chart-2: #31220a;
+  --chart-3: #52463d;
+  --chart-4: #2d4a42;
+  --chart-5: #6b8680;
+  --radius: 12px;
+  --sidebar: #faf9f5;
+  --sidebar-foreground: #1a1c1a;
+  --sidebar-primary: #18281e;
+  --sidebar-primary-foreground: #faf9f5;
+  --sidebar-accent: #31220a;
+  --sidebar-accent-foreground: #faf9f5;
+  --sidebar-border: #e8e4da;
+  --sidebar-ring: #18281e;
 }
 
 .dark {
@@ -76,8 +81,8 @@
 }
 
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
-  --font-serif: 'Lora', 'Geist Fallback';
+  --font-sans: 'Manrope', 'Manrope Fallback';
+  --font-serif: 'Newsreader', 'Newsreader Fallback';
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -103,8 +108,8 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 8px);
+  --radius-md: calc(var(--radius) - 4px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --color-sidebar: var(--sidebar);

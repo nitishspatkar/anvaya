@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono, Lora } from 'next/font/google'
+import { Newsreader, Manrope, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] })
+const _newsreader = Newsreader({ subsets: ["latin"], variable: "--font-serif" })
+const _manrope = Manrope({ subsets: ["latin"], variable: "--font-sans" })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
-const _lora = Lora({ subsets: ["latin"], variable: "--font-serif" })
 
 export const metadata: Metadata = {
   title: 'Anvaya | Home Away From Home',
