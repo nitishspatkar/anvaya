@@ -2,17 +2,17 @@ import Link from 'next/link';
 
 export default function ExperiencesCTA() {
   return (
-    <section className="bg-muted/30 py-16 md:py-24">
-      <div className="max-w-3xl mx-auto px-4 md:px-8 text-center">
-        <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-          Don&apos;t see exactly what you&apos;re looking for?
+    <section className="py-16 md:py-24 bg-muted">
+      <div className="max-w-2xl mx-auto px-8 md:px-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          Don't see what you're looking for?
         </h2>
         
-        <p className="text-lg md:text-xl text-muted-foreground mb-10">
-          Tell us what captures your imagination — we&apos;ll build around you.
+        <p className="text-lg text-muted-foreground mb-8">
+          Tell us what excites you. We'll build a trip around you.
         </p>
 
-        <Link href="/request-trip" className="inline-block bg-primary text-primary-foreground px-8 md:px-10 py-3 md:py-4 font-medium text-base md:text-lg hover:bg-primary/90 transition">
+        <Link href="/request-trip" className="inline-block bg-primary text-primary-foreground px-6 py-3 font-medium hover:opacity-80 transition">
           Request a Trip
         </Link>
       </div>
