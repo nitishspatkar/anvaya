@@ -2,53 +2,45 @@ import Link from 'next/link'
 
 export default function InitialInquiry() {
   return (
-    <section className="py-20 md:py-32 bg-background relative overflow-hidden">
-      {/* Accent Elements */}
-      <div className="absolute top-1/2 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-      <div className="absolute -bottom-32 left-1/3 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
+    <section className="py-24 md:py-40 bg-background relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-accent/8 rounded-full blur-3xl -mr-48 -mt-48" />
+      <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-secondary/8 rounded-full blur-3xl -mb-48" />
+      
+      <div className="max-w-2xl mx-auto px-4 md:px-8 relative z-10">
+        <div className="space-y-10 text-center">
+          {/* Pre-heading */}
+          <div className="inline-block mx-auto">
+            <span className="text-xs font-mono text-accent tracking-widest uppercase px-3 py-1 border border-accent/30 rounded">
+              Let&apos;s Begin
+            </span>
+          </div>
 
-      <div className="max-w-3xl mx-auto px-4 md:px-8 relative z-10">
-        {/* Content Box */}
-        <div className="border border-border bg-card/50 backdrop-blur p-12 md:p-16 space-y-8">
-          <div className="space-y-6">
-            <div className="inline-block">
-              <span className="text-xs font-mono text-accent tracking-widest uppercase">Get Started</span>
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
-              Tell us what you&apos;re looking for
+          {/* Heading */}
+          <div className="space-y-4">
+            <h2 className="font-serif text-5xl md:text-6xl font-bold text-foreground leading-tight">
+              Ready to experience Switzerland differently?
             </h2>
             
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              This is not a transaction. It's the beginning of a meaningful conversation where we understand your vision and determine if we're the right fit for your journey.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Start a conversation with us. Share what matters to you, and we&apos;ll craft something meaningful together.
             </p>
           </div>
 
-          {/* Info Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-border pt-8">
-            <div className="space-y-2">
-              <p className="text-xs text-accent font-mono uppercase tracking-wider">Step 1</p>
-              <p className="text-sm text-muted-foreground">Share your preferences and interests</p>
-            </div>
-            <div className="space-y-2">
-              <p className="text-xs text-accent font-mono uppercase tracking-wider">Step 2</p>
-              <p className="text-sm text-muted-foreground">We discuss and understand your vision</p>
-            </div>
-            <div className="space-y-2">
-              <p className="text-xs text-accent font-mono uppercase tracking-wider">Step 3</p>
-              <p className="text-sm text-muted-foreground">Craft a custom experience together</p>
-            </div>
-          </div>
-
-          {/* CTA */}
-          <div className="pt-6">
+          {/* CTA Button */}
+          <div className="pt-4">
             <Link
               href="/request-trip"
-              className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-8 py-3 font-medium hover:bg-accent/90 transition group"
+              className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-10 py-4 font-medium text-lg hover:bg-accent/90 transition group border-2 border-accent"
             >
-              Start Your Journey
+              Share Your Vision
               <span className="group-hover:translate-x-1 transition">→</span>
             </Link>
+          </div>
+
+          {/* Trust signal */}
+          <div className="text-sm text-muted-foreground pt-8 border-t border-border/30">
+            <p>No commitments. No hidden fees. Just genuine conversation.</p>
           </div>
         </div>
       </div>
