@@ -4,38 +4,64 @@ import { HOME_GALLERY_PREVIEW } from '@/lib/gallery-images'
 
 export default function GalleryPreview() {
   return (
-    <section id="gallery" className="py-16 md:py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
+    <section id="gallery" className="py-20 md:py-32 bg-background relative overflow-hidden">
+      {/* Accent Elements */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl -mt-48" />
+
+      <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
         {/* Section Header */}
-        <div className="mb-12 md:mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">
+        <div className="mb-16 md:mb-20 space-y-4">
+          <p className="text-xs text-accent font-mono uppercase tracking-widest">Gallery</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight max-w-2xl">
             A Glimpse into Life Here
           </h2>
           <p className="text-lg text-muted-foreground">
-            Stories captured through moments
+            Stories captured through moments of authentic connection
           </p>
         </div>
 
-        {/* Editorial Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-max gap-4 md:gap-6 mb-12">
-          {HOME_GALLERY_PREVIEW.map((img, index) => (
-            <div key={img.src} className="relative aspect-square overflow-hidden group">
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                priority={index < 4}
-              />
-            </div>
-          ))}
+        {/* Dynamic Gallery Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
+          {HOME_GALLERY_PREVIEW.map((img, index) => {
+            // Varied aspect ratios for visual interest
+            const spans = index === 0 || index === 5 ? 'lg:col-span-2 lg:row-span-2' : '';
+            
+            return (
+              <div 
+                key={img.src} 
+                className={`group relative overflow-hidden bg-card/50 border border-border/50 hover:border-accent/50 transition-all duration-300 ${spans}`}
+              >
+                <div className={`relative w-full ${spans ? 'aspect-square' : 'aspect-square'} overflow-hidden`}>
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    priority={index < 4}
+                  />
+                  
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-4">
+                    <p className="text-sm text-foreground font-medium">{img.alt}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
-        {/* View Gallery Link */}
-        <div className="border-t border-border pt-8">
-          <Link href="/gallery" className="text-primary font-medium hover:underline text-lg inline-flex items-center gap-2">
-            View Full Gallery →
+        {/* View Gallery CTA */}
+        <div className="border-t border-border pt-8 flex items-center justify-between">
+          <p className="text-muted-foreground text-sm">
+            Explore {HOME_GALLERY_PREVIEW.length} more moments from our life
+          </p>
+          <Link 
+            href="/gallery" 
+            className="inline-flex items-center gap-3 text-accent font-medium hover:gap-4 transition-all group"
+          >
+            View Full Gallery
+            <span className="group-hover:translate-x-1 transition">→</span>
           </Link>
         </div>
       </div>
