@@ -5,39 +5,38 @@ import { HOME_GALLERY_PREVIEW } from '@/lib/gallery-images'
 export default function GalleryPreview() {
   return (
     <section id="gallery" className="py-24 md:py-40 bg-background relative overflow-hidden">
-      {/* Layered background accents */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-accent/4 rounded-full blur-3xl" />
+      {/* Subtle background accents */}
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-secondary/3 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-accent/3 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
-        {/* Section Header with accent */}
+        {/* Section Header */}
         <div className="mb-16 md:mb-20 space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-8 h-px bg-secondary" />
-            <span className="text-xs font-mono text-secondary uppercase tracking-widest">Visual Stories</span>
+            <span className="text-xs font-mono text-secondary uppercase tracking-widest">Moments</span>
           </div>
           
           <h2 className="font-serif text-5xl md:text-6xl font-bold text-foreground leading-tight max-w-3xl">
-            A Glimpse into Life Here
+            Our life in the Alps
           </h2>
           
           <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            Moments of authentic connection captured through our daily life in the Alps
+            What daily life looks like here. Not filtered. Not performed. Real.
           </p>
         </div>
 
-        {/* Dynamic Gallery Grid with premium styling */}
+        {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-16">
           {HOME_GALLERY_PREVIEW.map((img, index) => {
-            // Varied layout for visual interest
             const spans = index === 0 || index === 5 ? 'sm:col-span-2 sm:row-span-2' : '';
             
             return (
               <div 
                 key={img.src} 
-                className={`group relative overflow-hidden border border-border/40 hover:border-secondary/60 transition-all duration-300 cursor-pointer ${spans}`}
+                className={`group relative overflow-hidden border border-border hover:border-secondary/40 transition-all duration-300 cursor-pointer ${spans}`}
               >
-                <div className={`relative w-full ${spans ? 'aspect-square' : 'aspect-square'} overflow-hidden bg-card/30`}>
+                <div className={`relative w-full ${spans ? 'aspect-square' : 'aspect-square'} overflow-hidden bg-muted/20`}>
                   <Image
                     src={img.src}
                     alt={img.alt}
@@ -47,8 +46,8 @@ export default function GalleryPreview() {
                     priority={index < 4}
                   />
                   
-                  {/* Premium overlay with gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6">
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-background/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6">
                     <p className="text-sm font-medium text-foreground">{img.alt}</p>
                   </div>
                 </div>
@@ -57,18 +56,18 @@ export default function GalleryPreview() {
           })}
         </div>
 
-        {/* View Gallery Section */}
-        <div className="border-t border-border/30 pt-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+        {/* View More */}
+        <div className="border-t border-border pt-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           <div>
             <p className="text-muted-foreground text-sm">
-              {HOME_GALLERY_PREVIEW.length} moments capturing our life in Switzerland
+              {HOME_GALLERY_PREVIEW.length} moments from living here
             </p>
           </div>
           <Link 
             href="/gallery" 
             className="inline-flex items-center gap-3 text-secondary font-medium hover:text-secondary/80 transition group"
           >
-            Explore Full Gallery
+            View All Photos
             <span className="group-hover:translate-x-2 transition duration-300">→</span>
           </Link>
         </div>

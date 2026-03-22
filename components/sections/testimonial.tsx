@@ -1,30 +1,30 @@
 export default function Testimonial() {
   return (
     <section className="py-24 md:py-40 bg-background relative overflow-hidden">
-      {/* Layered background accents */}
-      <div className="absolute top-1/3 right-1/3 w-96 h-96 bg-secondary/6 rounded-full blur-3xl" />
-      <div className="absolute -bottom-32 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      {/* Subtle background accents */}
+      <div className="absolute top-1/3 right-1/3 w-96 h-96 bg-secondary/3 rounded-full blur-3xl" />
+      <div className="absolute -bottom-32 left-0 w-96 h-96 bg-accent/3 rounded-full blur-3xl" />
 
       <div className="max-w-3xl mx-auto px-4 md:px-8 relative z-10">
-        {/* Premium Testimonial Card */}
-        <div className="border border-border/40 bg-card/30 backdrop-blur p-12 md:p-16 space-y-10">
-          {/* Quote Mark with Accent Color */}
+        {/* Testimonial Card */}
+        <div className="border border-border bg-white p-12 md:p-16 space-y-10">
+          {/* Quote Mark */}
           <div className="flex gap-4">
-            <div className="text-6xl md:text-7xl text-secondary/30 font-serif leading-none">
+            <div className="text-6xl md:text-7xl text-secondary/20 font-serif leading-none">
               "
             </div>
           </div>
 
           {/* Quote */}
           <blockquote className="space-y-4">
-            <p className="font-serif text-2xl md:text-3xl font-bold text-foreground leading-tight">
-              This wasn&apos;t just a trip—it was coming home to a place I&apos;d never been before. Rajesh and Priya made us feel like locals, not tourists.
+            <p className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
+              This wasn't just a trip—it was coming home to a place I'd never been before. Rajesh and Priya made us feel like locals, not tourists.
             </p>
           </blockquote>
 
-          {/* Attribution with Premium Avatar */}
-          <div className="border-t border-border/40 pt-10 flex items-center gap-4">
-            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-secondary/30 to-accent/20 flex items-center justify-center border border-secondary/40">
+          {/* Attribution */}
+          <div className="border-t border-border pt-10 flex items-center gap-4">
+            <div className="w-14 h-14 rounded-full bg-secondary/15 flex items-center justify-center border border-secondary/20">
               <span className="text-lg font-bold text-secondary">AS</span>
             </div>
             <div>
@@ -34,9 +34,9 @@ export default function Testimonial() {
           </div>
 
           {/* Trust Signal */}
-          <div className="border-t border-border/40 pt-8">
+          <div className="border-t border-border pt-8">
             <p className="text-xs text-muted-foreground uppercase tracking-widest font-mono">
-              Verified Guest Experience
+              Verified Guest
             </p>
           </div>
         </div>
