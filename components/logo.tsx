@@ -8,7 +8,7 @@ interface LogoProps {
 
 export default function Logo({
   className = '',
-  latinClassName = 'font-serif text-2xl font-bold text-primary',
+  latinClassName = 'font-sans text-xl font-bold text-primary',
   devanagariClassName = 'text-xs text-muted-foreground tracking-wide',
 }: LogoProps) {
   return (
