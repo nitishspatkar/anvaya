@@ -5,39 +5,36 @@ import { HOME_GALLERY_PREVIEW } from '@/lib/gallery-images'
 export default function GalleryPreview() {
   return (
     <section id="gallery" className="py-16 md:py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        {/* Section Header */}
-        <div className="mb-12 md:mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">
-            A Glimpse into Life Here
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Stories captured through moments
-          </p>
-        </div>
+      <div className="max-w-2xl mx-auto px-8 md:px-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+          Our life in the Alps
+        </h2>
+        <p className="text-muted-foreground mb-12">Real scenes from how we spend our days.</p>
 
-        {/* Editorial Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-max gap-4 md:gap-6 mb-12">
-          {HOME_GALLERY_PREVIEW.map((img, index) => (
-            <div key={img.src} className="relative aspect-square overflow-hidden group">
+        {/* Simple uniform grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10">
+          {HOME_GALLERY_PREVIEW.slice(0, 6).map((img, index) => (
+            <div 
+              key={img.src}
+              className="relative w-full aspect-square overflow-hidden bg-muted hover:opacity-80 transition"
+            >
               <Image
                 src={img.src}
                 alt={img.alt}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                priority={index < 4}
+                className="object-cover"
+                sizes="(max-width: 768px) 50vw, 33vw"
               />
             </div>
           ))}
         </div>
 
-        {/* View Gallery Link */}
-        <div className="border-t border-border pt-8">
-          <Link href="/gallery" className="text-primary font-medium hover:underline text-lg inline-flex items-center gap-2">
-            View Full Gallery →
-          </Link>
-        </div>
+        <Link 
+          href="/gallery"
+          className="text-primary font-medium hover:opacity-80 transition"
+        >
+          View all photos →
+        </Link>
       </div>
     </section>
   );

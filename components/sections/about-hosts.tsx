@@ -1,37 +1,27 @@
-import Link from 'next/link';
-
 export default function AboutHosts() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-muted/20">
-      <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-          {/* Text Content */}
+    <section className="py-16 md:py-24 bg-background">
+      <div className="max-w-2xl mx-auto px-8 md:px-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          We're Rajesh & Priya
+        </h2>
+        
+        <div className="space-y-4 text-muted-foreground">
+          <p>We moved to Bern in 2018 for work and fell in love with living here. We spend weekends hiking the Alps, cooking, and exploring with friends.</p>
+          
+          <p>People kept asking us to show them around. They didn't want a tour guide—they wanted to know what our life actually feels like here. So we created Anvaya.</p>
+          
+          <p>That's what we share. Our life. Our stories. Our connection to this place.</p>
+        </div>
+
+        <div className="flex gap-12 mt-10 pt-10 border-t border-border">
           <div>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">
-              Meet Your Hosts
-            </h2>
-            
-            <p className="text-lg text-foreground leading-relaxed mb-6">
-              We moved to Bern in 2018 to chase careers in tech and medicine. Since then, we have hosted many friends and been on countless hikes in the Swiss Alps across all seasons. We have a desire to share the Switzerland we&apos;ve come to love with others who understand what it means to belong between two worlds.
-            </p>
-
-            <p className="text-lg text-foreground leading-relaxed mb-8">
-              Now, we curate intimate journeys for you. Every experience is personal, thoughtful, and rooted in our 9 years of living, working, and exploring in Switzerland.
-            </p>
-
-            <Link href="#" className="text-primary font-medium hover:underline text-lg inline-flex items-center gap-2">
-              Read Our Story →
-            </Link>
+            <p className="text-3xl font-bold text-primary">6+</p>
+            <p className="text-sm text-muted-foreground">Years here</p>
           </div>
-
-          {/* Image Placeholder */}
           <div>
-            <div className="w-full aspect-square bg-gradient-to-br from-secondary/30 via-secondary/20 to-muted/30 rounded-none flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl text-secondary/40 mb-4">📸</div>
-                <p className="text-muted-foreground">Image Placeholder</p>
-              </div>
-            </div>
+            <p className="text-3xl font-bold text-primary">100+</p>
+            <p className="text-sm text-muted-foreground">Happy guests</p>
           </div>
         </div>
       </div>
